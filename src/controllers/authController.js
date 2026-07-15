@@ -20,8 +20,10 @@ const register = async (req, res, next) => {
 
         return res.status(201).json({
             message: 'User registered',
-            name,
-            email
+            user: {
+                name,
+                email
+            }
         });
     }
     catch(error) {
